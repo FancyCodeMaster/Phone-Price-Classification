@@ -1,1 +1,1 @@
-web : gunicorn main : phonepriceclassification
+web: gunicorn main:app
