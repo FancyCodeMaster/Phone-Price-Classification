@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{%block head%}
+<title>Result</title>
+<link rel="stylesheet" type="text/css" href="{{url_for('static' , filename='css/result.css')}}"
+{%endblock%}
+{%block body%}
+<body>
+    <div class="result_container">
+            <h2>Your mobile price range is : </h2>
+            <h3>{%if data == "[0]"%}
+                    Low Cost
+                {%endif%}
+                {%if data == "[1]"%}
+                    Medium Cost
+                {%endif%}
+                {%if data == "[2]"%}
+                    High Cost
+                {%endif%}
+                {%if data == "[3]"%}
+                    Very High Cost
+                {%endif%}
+            </h3>
+    </div>
+</body>
+{%endblock%}

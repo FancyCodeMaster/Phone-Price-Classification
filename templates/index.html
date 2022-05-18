@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{%block head%}
+    <title>Mobile Price Classification -- FancyCodeMaster</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static' , filename='css/index.css')}}">
+{%endblock%}
+{%block body%}
+<body>
+    <div class="main_container">
+        <h1>Mobile Price Classification</h1>
+        <h4>Select all the values and hit submit to find the range of your desired mobile price</h4>
+        <form action="{{url_for('main')}}" method="post">
+            <div class="battery_power">
+                <label for="battery_power">Total energy a battery can store in one time measured in mAh</label>
+                <input type="number" name="battery_power" required />
+            </div>
+            <div class="bluetooth">
+                <label for="blue">Has bluetooth or not</label>
+                <select name="blue">
+                    <option value="0">no</option>
+                    <option value="1">yes</option>
+                </select>
+            </div>
+            <div class="clock_speed">
+                <label for="clock_speed">speed at which microprocessor executes instructions</label>
+                <input type="number" name="clock_speed" required />
+            </div>
+            <div class="dual_sim">
+                <label for="dual_sim">Has dual sim support or not</label>
+                <select name="dual_sim">
+                    <option value="0">no</option>
+                    <option value="1">yes</option>
+                </select>
+            </div>
+            <div class="front_camera">
+                <label for="fc">Front Camera mega pixels</label>
+                <input type="number" name="fc" required />
+            </div>
+            <div class="4g">
+                <label for="four_g">Has 4G or not</label>
+                <select name="four_g">
+                    <option value="0">no</option>
+                    <option value="1">yes</option>
+                </select>
+            </div>
+            <div class="internal_memory">
+                <label for="int_memory">Internal Memory in Gigabytes</label>
+                <input type="number" name="int_memory" required />
+            </div>
+            <div class="mobile_depth">
+                <label for="m_dep">Mobile Depth in cm</label>
+                <input type="number" name="m_dep" required />
+            </div>
+            <div class="mobile_weight">
+                <label for="mobile_wt">Weight of mobile phone</label>
+                <input type="number" name="mobile_wt" required />
+            </div>
+            <div class="number_of_cores">
+                <label for="n_cores">Number of cores of processor</label>
+                <input type="number" name="n_cores" required />
+            </div>
+            <div class="primary_camera">
+                <label for="pc">Primary Camera mega pixels</label>
+                <input type="number" name="pc" required />
+            </div>
+            <div class="pixel_height">
+                <label for="px_height">Pixel Resolution Height</label>
+                <input type="number" name="px_height" required />
+            </div>
+            <div class="pixel_width">
+                <label for="px_width">Pixel Resolution Width</label>
+                <input type="number" name="px_width" required />
+            </div>
+            <div class="ram">
+                <label for="ram">Random Access Memory in Mega Bytes</label>
+                <input type="number" name="ram" required />
+            </div>
+            <div class="screen_height">
+                <label for="sc_h">Screen Height of mobile in cm</label>
+                <input type="number" name="sc_h" required />
+            </div>
+            <div class="screen_width">
+                <label for="sc_w">Screen Width of mobile in cm</label>
+                <input type="number" name="sc_w" required />
+            </div>
+            <div class="talk_time">
+                <label for="talk_time">longest time that a single battery charge will last when you are</label>
+                <input type="number" name="talk_time" required />
+            </div>
+            <div class="3g">
+                <label for="three_g">Has 3G or not</label>
+                <select name="three_g">
+                    <option value="0">no</option>
+                    <option value="1">yes</option>
+                </select>
+            </div>
+            <div class="touch_screen">
+                <label for="touch_screen">Has touch screen or not</label>
+                <select name="touch_screen">
+                    <option value="0">no</option>
+                    <option value="1">yes</option>
+                </select>
+            </div>
+            <div class="wifi">
+                <label for="wifi">Has wifi or not</label>
+                <select name="wifi">
+                    <option value="0">no</option>
+                    <option value="1">yes</option>
+                </select>
+            </div>
+            <div class="confirm_button_container">
+                <button type="submit" class="confirm_button">Confirm</button>
+            </div>
+        </form>
+    </div>
+    <script src="{{url_for('static' , filename='js/index.js')}}"></script>
+</body>
+{%endblock%}
